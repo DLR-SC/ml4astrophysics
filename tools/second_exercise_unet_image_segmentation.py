@@ -19,8 +19,8 @@ def main(train=True):
     # epochs = ?
 
     # read Spacenet 7 data
-    images = util.read_spacenet7_images('/your_data_path/L15-0506E-1204N_2027_3374_13/')
-    targets = util.read_spacenet7_masks('/your_data_path/L15-0506E-1204N_2027_3374_13/')
+    images = util.read_spacenet7_images('../data/L15-0506E-1204N_2027_3374_13/')
+    targets = util.read_spacenet7_masks('../data/L15-0506E-1204N_2027_3374_13/')
 
     # Store to numpy file
     #np.savez('../data/Unet/image_data.npz', images=images, targets=targets)
