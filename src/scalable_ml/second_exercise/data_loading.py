@@ -1,5 +1,7 @@
 """
-Helper routines to load the images and masks from SpaceNet7, some routines have been found on www.kaggle.com
+Helper routines to load the images and masks from SpaceNet7.
+The implementation of the ChipCreator class closely follows the discussion and resources for "SpaceNet 7 Creating Image
+Chips and Masks" on Kaggle.com [https://www.kaggle.com/code/amerii/spacenet-7-creating-image-chips-and-masks].
 """
 from torch.utils.data import Dataset
 from PIL import Image
