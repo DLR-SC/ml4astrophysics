@@ -1,0 +1,52 @@
+[project]
+name = "scalable_ml"
+version = "2.0.0"
+description = "Scalable Machine Learning for Astrophysical Surveys"
+readme = "README.md"
+authors = [
+    {name = "Alexander Rüttgers", email = "alexander.ruettgers@dlr.de"},
+]
+requires-python = ">=3.7"
+
+dependencies = [
+    "numpy",
+    "tqdm",
+    "matplotlib",
+    "torch==1.7.1",
+    "torchvision",
+    "torchsummary",
+    "tensorboard",
+    "imageio",
+    "av",
+    "rasterio",
+    "torchmetrics",
+    "geopandas",
+]
+
+[project.optional-dependencies]
+test = [
+    "pytest",
+    "pytest-cov",
+    "pylint",
+    "pylint_json2html",
+]
+
+[tool.pylint."MESSAGES CONTROL"]
+max-line-length = 120
+generated-members=["torch.*"]
+good-names = [
+    "x",
+    "y",
+    "z",
+]
+variable-rgx = "[a-z_][a-z0-9_]{0,30}$"
+argument-rgx = "[a-z_][a-z0-9_]{0,30}$"
+max-args=15
+max-locals=50
+
+[build-system]
+requires = ["setuptools", "pip"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
