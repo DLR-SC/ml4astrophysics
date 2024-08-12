@@ -38,8 +38,6 @@ class eROSITA(Dataset):
 
     def __load_and_normalize_images__(self, path, normalize, eps=1e-6):
         for folder in os.listdir(path):         # iterate over skytiles
-            if folder == '138':
-                break
             folder_path = os.path.join(path, folder)
             folder_path = os.path.join(folder_path, os.listdir(folder_path)[0])     # select first and only subfolder
             images = []
